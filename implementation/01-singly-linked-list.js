@@ -13,11 +13,16 @@ class SinglyLinkedList {
     }
 
     addToHead(val) {
-        // Add node of val to head of linked list
+        let newNode = new SinglyLinkedNode(val);
 
-        // Your code here 
+        if (!this.head) {
+            this.head = newNode;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+        }
 
-        // Write your hypothesis on the time complexity of this method here
+        this.length++;
     }
 
     addToTail(val) {
@@ -45,7 +50,7 @@ class SinglyLinkedList {
     removeFromHead() {
         // Remove node at head
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }
@@ -53,7 +58,7 @@ class SinglyLinkedList {
     removeFromTail() {
         // Remove node at tail
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }
@@ -61,7 +66,7 @@ class SinglyLinkedList {
     peekAtHead() {
         // Return the value of head node
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }
@@ -69,7 +74,7 @@ class SinglyLinkedList {
     print() {
         // Print out the linked list
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }
